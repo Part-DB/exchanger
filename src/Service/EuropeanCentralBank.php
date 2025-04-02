@@ -76,14 +76,16 @@ final class EuropeanCentralBank extends HttpService
         $formattedDate = $exchangeQuery->getDate()->format('Y-m-d');
         $quoteCurrency = $currencyPair->getQuoteCurrency();
 
+        /**
+         * if rate do not exist for actual date, try get prev day rate, while ge it
+         */
         $prevDays = 0;
         while (empty($element->xpath('//xmlns:Cube[@time="'.$formattedDate.'"]'))) {
             $prevDays ++;
             if ($prevDays > 7) {
                 throw new UnsupportedDateException($exchangeQuery->getDate(), $this);
             }
-            $formattedDate = $exchangeQuery
-                ->getDate()
+            $formattedDate = (clone $exchangeQuery->getDate())
                 ->sub(new DateInterval('P'.$prevDays.'D'))
                 ->format('Y-m-d');
         }
