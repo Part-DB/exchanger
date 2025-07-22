@@ -38,7 +38,7 @@
         "php-http/message": "^1.7",
         "php-http/mock-client": "^1.0",
         "php-http/message-factory": "^1.1",
-        "symfony/http-client": "^5.4 || ^6.4",
+        "symfony/http-client": "^5.4 || ^6.4 || ^7.0",
         "nyholm/psr7": "^1.0"
     },
     "scripts": {
