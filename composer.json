@@ -1,15 +1,19 @@
 {
-    "name": "florianv/exchanger",
+    "name": "part-db/exchanger",
     "type": "library",
-    "description": "Currency exchange rates framework for PHP",
+    "description": "Fork of florianv/exchanger, a library to convert currencies using different exchange rate providers. Modernized to be compatible with Part-DB.",
     "keywords": ["currency", "money", "rate", "conversion", "exchange rates"],
-    "homepage": "https://github.com/florianv/exchanger",
+    "homepage": "https://github.com/Part-DB/exchanger",
     "license": "MIT",
     "authors": [
         {
             "name": "Florian Voutzinos",
             "email": "florian@voutzinos.com",
             "homepage": "https://voutzinos.com"
+        },
+        {
+            "name": "Jan Böhmer",
+            "email": "mail@jan-boehmer.de"
         }
     ],
     "autoload": {
