@@ -1,9 +1,5 @@
 # Exchanger
 
-[![Build status](http://img.shields.io/travis/florianv/exchanger/master.svg?style=flat-square)](https://travis-ci.org/florianv/exchanger)
-[![Total Downloads](https://img.shields.io/packagist/dt/florianv/exchanger.svg?style=flat-square)](https://packagist.org/packages/florianv/exchanger)
-[![Version](http://img.shields.io/packagist/v/florianv/exchanger.svg?style=flat-square)](https://packagist.org/packages/florianv/exchanger)
-
 **This is a fork of [florianv/exchanger](https://github.com/florianv/exchanger) for the use in Part-DB.**
 
 Exchanger is a PHP framework to work with currency exchange rates from various services such as
