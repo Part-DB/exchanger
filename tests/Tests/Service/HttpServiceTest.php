@@ -50,8 +50,8 @@ class HttpServiceTest extends TestCase
      */
     public function initialize_with_null_as_client()
     {
-        $this->expectException(\Http\Discovery\Exception\NotFoundException::class);
-        $this->expectExceptionMessage('No HTTPlug clients found. Make sure to install a package providing "php-http/client-implementation"');
+        $this->expectNotToPerformAssertions();
+        // if null is passed a new instance HttpClient is generated in the HttpService.
         $this->createAnonymousClass(null);
     }
 

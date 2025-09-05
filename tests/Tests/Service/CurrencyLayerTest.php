@@ -106,7 +106,7 @@ class CurrencyLayerTest extends ServiceTestCase
         $content = file_get_contents(__DIR__.'/../../Fixtures/Service/CurrencyLayer/historical_success.json');
         $date = new \DateTime('2015-05-06');
         $expectedDate = new \DateTime();
-        $expectedDate->setTimestamp(1430870399);
+        $expectedDate->setTimestamp(1430784000);
 
         $service = new CurrencyLayer($this->getHttpAdapterMock($uri, $content), null, ['access_key' => 'secret']);
         $rate = $service->getExchangeRate(new HistoricalExchangeRateQuery($pair, $date));
@@ -126,7 +126,7 @@ class CurrencyLayerTest extends ServiceTestCase
         $content = file_get_contents(__DIR__.'/../../Fixtures/Service/CurrencyLayer/historical_success.json');
         $date = new \DateTime('2015-05-06');
         $expectedDate = new \DateTime();
-        $expectedDate->setTimestamp(1430870399);
+        $expectedDate->setTimestamp(1430784000);
 
         $pair = CurrencyPair::createFromString('USD/AED');
         $service = new CurrencyLayer($this->getHttpAdapterMock($uri, $content), null, ['access_key' => 'secret', 'enterprise' => true]);

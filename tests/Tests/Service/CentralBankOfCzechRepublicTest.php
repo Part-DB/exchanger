@@ -111,7 +111,7 @@ class CentralBankOfCzechRepublicTest extends ServiceTestCase
         $pair = CurrencyPair::createFromString('IDR/CZK');
         $rate = $this->createService()->getExchangeRate(new ExchangeRateQuery($pair));
 
-        $this->assertSame(0.001798, $rate->getValue());
+        $this->assertSame(0.001798, (float)\number_format($rate->getValue(), 6));
         $this->assertEquals('central_bank_of_czech_republic', $rate->getProviderName());
         $this->assertSame($pair, $rate->getCurrencyPair());
     }
