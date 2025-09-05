@@ -57,6 +57,7 @@ final class Registry
             'apilayer_currency_data' => ApiLayer\CurrencyData::class,
             'apilayer_exchange_rates_data' => ApiLayer\ExchangeRatesData::class,
             'frankfurter' => Frankfurter::class,
+            'fawazahmed_currency_api' => FawazahmedCurrencyAPI::class,
         ];
     }
 }
