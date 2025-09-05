@@ -77,6 +77,9 @@ final class CentralBankOfCzechRepublic extends HttpService
         $currencyPair = $exchangeQuery->getCurrencyPair();
         $content = $this->request($this->buildUrl($requestedDate));
 
+        //Normalize line endings
+        $content = str_replace(["\r\n", "\r"], "\n", $content);
+
         $lines = explode("\n", $content);
 
         if (!$date = \DateTime::createFromFormat(self::DATE_FORMAT, $this->parseDate($lines[0]))) {
